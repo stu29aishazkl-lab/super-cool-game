@@ -1,0 +1,82 @@
+================================================================================
+HEIDI'S ADVENTURE GAME - HOW IT WORKS (Beginner-Friendly)
+================================================================================
+
+This game is written in simple Python for beginners.
+
+✨ GOOD NEWS: The code now has EXTREMELY detailed comments!
+   Every single line is explained so you can learn as you read.
+   Open heidi_adventure.py and you'll see comments explaining everything!
+
+HOW THE CODE WORCTIONS:
+
+1. VARIABLE TO TRACK SCENE:
+   current_scene = "start"
+   - This keeps track of which part of the story we're in
+
+2. FUNCTIONS FOR EACH SCENE:
+   - Each scene has its own function (like show_start(), show_scene_1(), etc.)
+   - Functions are like small programs that do one job
+
+3. BUTTON CLICKS:
+   - When you click a button, it calls a function
+   - For example: command=show_stay_alps means "when clicked, run show_stay_alps()"
+
+4. CLEAR AND SHOW:
+   - clear_window() removes all widgets (buttons, labels) from the screen
+   - Then the new scene shows new widgets
+
+THE STORY STRUCTURE (from stry.txt):
+
+Scene 1: The Beginning
+- Two choices:
+  * Stay in Alps → Path 1
+  * Travel to Frankfurt → Path 2
+
+Path 1 - Stay in Alps:
+- Grandfather gets sick
+- Two choices:
+  * Go for help → Ending A (Heidi the Brave)
+  * Stay home → Ending B (Heidi the Heart)
+
+Path 2 - Travel to Frankfurt:
+- Clara asks her to stay
+- Two choices:
+  * Stay in Frankfurt → Ending C (Heidi the Writer)
+  * Return home → Ending D (Heidi the Dreamer)
+
+CODING CONCEPTS USED:
+
+✅ Variables (current_scene)
+✅ Functions (def show_start())
+✅ If/else (built into button commands - each button leads to different function)
+✅ Tkinter widgets (Label, Button, Canvas)
+✅ Event handling (command= when buttons are clicked)
+
+WHAT EACH FUNCTION DOES:
+
+1. show_start() - Shows the title screen with "Sponsored by RunMyModel.org"
+2. show_scene_1() - Shows the first story scene
+3. show_stay_alps() - Path when Heidi stays in Alps
+4. show_travel_frankfurt() - Path when Heidi travels to Frankfurt
+5. show_ending_brave() - Ending A
+6. show_ending_heart() - Ending B  
+7. show_ending_writer() - Ending C
+8. show_ending_dreamer() - Ending D
+9. clear_window() - Clears the screen to show new content
+
+FLOW OF THE GAME:
+
+Start → Button Click → Function Runs → New Screen Shows → 
+Button Click → Function Runs → Ending Shows → Restart Button
+
+EACH BUTTON:
+- Has a label (the text you see)
+- Has a command (which function to run when clicked)
+- Has styling (colors, fonts, size)
+
+TO RUN THE GAME:
+python heidi_adventure.py
+
+================================================================================
+

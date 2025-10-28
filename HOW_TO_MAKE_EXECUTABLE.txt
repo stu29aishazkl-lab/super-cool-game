@@ -1,0 +1,101 @@
+================================================================================
+HOW TO TURN YOUR PYTHON GAME INTO AN EXECUTABLE
+================================================================================
+
+You have two options:
+
+1. FOR WINDOWS (.exe file)
+2. FOR MAC (.app bundle)
+
+We'll use PyInstaller to do this.
+
+================================================================================
+STEP 1: INSTALL PYINSTALLER
+================================================================================
+
+Open your terminal/command prompt and type:
+
+pip install pyinstaller
+
+Wait for it to install. This might take a minute or two.
+
+================================================================================
+STEP 2: CREATE THE EXECUTABLE
+================================================================================
+
+FOR WINDOWS:
+-----------
+Go to the folder where heidi_adventure.py is located.
+Then type:
+
+pyinstaller --onefile --windowed --name "HeidisAdventure" heidi_adventure.py
+
+What this does:
+- --onefile = Creates a single .exe file
+- --windowed = No console window (clean look)
+- --name = Names it "HeidisAdventure.exe"
+- heidi_adventure.py = Your game file
+
+IMPORTANT: Don't use apostrophes in the name (like "Heidi's").
+           It will cause an error. Use "HeidisAdventure" instead.
+
+FOR MAC:
+--------
+Go to the folder where heidi_adventure.py is located.
+Then type:
+
+pyinstaller --onefile --windowed --name "HeidisAdventure" heidi_adventure.py
+
+To create a Mac app bundle:
+
+pyinstaller --windowed --name "HeidisAdventure" heidi_adventure.py
+
+IMPORTANT: Avoid apostrophes in the name!
+
+================================================================================
+STEP 3: FIND YOUR EXECUTABLE
+================================================================================
+
+After the process finishes, look in the "dist" folder in your project.
+
+You'll find:
+- Windows: HeidisAdventure.exe
+- Mac: HeidisAdventure (or Heidi's Adventure.app)
+
+You can double-click it to run the game!
+
+You can copy this file to anyone and they can run your game
+without having Python installed!
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+If you get an error about Python not being in PATH:
+1. Make sure Python is installed
+2. Try: python -m pip install pyinstaller
+
+If the .exe file is too large:
+- The file will be several MB because it includes Python
+- This is normal!
+
+If it doesn't work on another computer:
+- Make sure the computer has the same operating system
+- A Windows .exe won't work on Mac/Linux
+
+================================================================================
+EXTRA OPTIONS
+================================================================================
+
+Add an icon to your .exe:
+
+pyinstaller --onefile --windowed --icon=icon.ico heidi_adventure.py
+
+(You need to create icon.ico first)
+
+Hide the console completely:
+
+Use --windowed flag (already included above)
+
+================================================================================
+
